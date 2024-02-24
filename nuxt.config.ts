@@ -3,21 +3,6 @@ export default defineNuxtConfig({
   site: {
     url: 'https://temp.cand.top',
   },
-  app: {
-    // head
-    head: {
-      title: 'Element Plus + Nuxt 3',
-      meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'ElementPlus + Nuxt3',
-        },
-      ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    }
-  },
 
   nitro: {
     // enable it when deploy to vercel, local development please disable it
@@ -50,7 +35,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-gtag',
     '@nuxtjs/sitemap',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxtjs/google-fonts'
   ],
 
   //@ts-ignore

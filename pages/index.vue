@@ -1,6 +1,5 @@
 <template>
   <div class="page-index">
-    <LanguageSeletor />
     <h1 class="text-3xl font-bold underline">
       {{ t('title') }}
     </h1>
@@ -26,4 +25,4 @@ const { t } = useI18n({
   en:
     title: hello world!
   
-  </i18n>
+</i18n>

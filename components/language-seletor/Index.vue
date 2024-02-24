@@ -33,7 +33,7 @@ watch(() => selected.value, (val) => {
 </script>
 
 <template>
-    <el-select v-model="selected" class="m-2" :placeholder="t('selectLanguage')" size="large">
+    <el-select v-model="selected" class="m-2 w-[160px]" :placeholder="t('selectLanguage')" size="large">
         <el-option v-for="item in availableLocales" :key="item.code" :label="item.name" :value="item.code">
           <div class="flex items-center">
             <img :src="`/flags/${item.flag}.svg`" class="w-8 h-8 mr-8">
