@@ -49,13 +49,39 @@ export default defineNuxtConfig({
     '@element-plus/nuxt',
     '@nuxtjs/color-mode',
     'nuxt-gtag',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/i18n'
   ],
 
   //@ts-ignore
   gtag: {
     id: 'G-5RBQ79CGYQ'
   },
+  i18n: {
+    strategy: 'prefix_and_default',
+    defaultLocale: 'en',
+    langDir: 'locales/',
+    lazy: false,
+    locales: [
+      { code: 'en', file: 'en.json' },
+      { code: 'zh', file: 'zh.json' }
+    ],
+    compilation: {
+      strictMessage: false
+    },
+    // @ts-ignore
+    precompile: {
+      strictMessage: false
+    },
+    skipSettingLocaleOnNavigate: true,
+
+    detectBrowserLanguage: { // 自动检测浏览器语言
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+    }
+  },
+
   // vueuse
   vueuse: {
     ssrHandlers: true,
