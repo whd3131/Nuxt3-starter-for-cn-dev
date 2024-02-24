@@ -1,21 +1,21 @@
 <template>
-  <header class="bg-white">
+  <header class="bg-white dark:bg-[#222222]">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
+          <span class="sr-only dark:text-white">Your Company</span>
           <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
         </a>
       </div>
       <div class="flex lg:hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = true">
-          <span class="sr-only">Open main menu</span>
+          <span class="sr-only dark:text-white">Open main menu</span>
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
       <PopoverGroup class="hidden lg:flex lg:gap-x-12">
         <Popover class="relative">
-          <PopoverButton class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+          <PopoverButton class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 dark:text-white">
             Product
             <ChevronDownIcon class="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
           </PopoverButton>
@@ -46,16 +46,24 @@
           </transition>
         </Popover>
 
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Features</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Marketplace</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Company</a>
       </PopoverGroup>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+      <div class="hidden items-center lg:flex lg:flex-1 lg:justify-end">
+        <div>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <div>
+          <LanguageSeletor />
+        </div>
+
+        <div>
+          <DarkModeSeletor />
+        </div>
       </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <LanguageSeletor />
-      </div>
+
     </nav>
     <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
       <div class="fixed inset-0 z-10" />
