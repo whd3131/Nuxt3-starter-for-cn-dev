@@ -4,4 +4,3 @@ dist
 .output
 .nuxt
 .vercel
-pnpm-lock.yaml
