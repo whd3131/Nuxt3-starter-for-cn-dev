@@ -1,5 +1,8 @@
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  site: {
+    url: 'https://temp.cand.top',
+  },
   app: {
     // head
     head: {
@@ -17,6 +20,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    // enable it when deploy to vercel, local development please disable it
     preset: 'vercel-edge',
   },
 
@@ -28,8 +32,8 @@ export default defineNuxtConfig({
   },
   // css
   css: [
-      '~/assets/scss/index.scss',
-      '~/assets/css/main.css'
+    '~/assets/scss/index.scss',
+    '~/assets/css/main.css'
   ],
 
   typescript: {
@@ -43,9 +47,14 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@element-plus/nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    'nuxt-gtag'
   ],
 
+  //@ts-ignore
+  gtag: {
+    id: 'G-5RBQ79CGYQ'
+  },
   // vueuse
   vueuse: {
     ssrHandlers: true,
