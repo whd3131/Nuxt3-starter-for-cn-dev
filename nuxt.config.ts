@@ -48,7 +48,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@element-plus/nuxt',
     '@nuxtjs/color-mode',
-    'nuxt-gtag'
+    'nuxt-gtag',
+    '@nuxtjs/sitemap'
   ],
 
   //@ts-ignore
