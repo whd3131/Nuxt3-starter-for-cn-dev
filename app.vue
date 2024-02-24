@@ -28,17 +28,15 @@ useHead({
 </script>
 
 <template>
-  <el-container>
-    <el-header>
-       <CustomerHeader />
-    </el-header>
-    <el-main>
-      <NuxtPage />
-    </el-main>
-    <el-footer>
-      <CustomerFooter />
-    </el-footer>
-  </el-container>
+    <el-container>
+      <CustomerHeader />
+      <el-main>
+        <NuxtPage />
+      </el-main>
+      <el-footer>
+        <CustomerFooter />
+      </el-footer>
+    </el-container>
 </template>
 
 <i18n lang="yaml">

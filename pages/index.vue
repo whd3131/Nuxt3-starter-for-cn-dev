@@ -1,10 +1,13 @@
 <template>
   <div class="page-index">
-    <h1 class="text-3xl font-bold underline">
-      {{ t('title') }}
-    </h1>
-    <Logos />
-    <Examples />
+<!--    <h1 class="text-3xl font-bold underline">-->
+<!--      {{ t('title') }}-->
+<!--    </h1>-->
+<!--    <Logos />-->
+<!--    <Examples />-->
+
+<!--    <Hero />-->
+
   </div>
 </template>
 <script setup>
