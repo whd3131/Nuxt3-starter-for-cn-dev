@@ -6,6 +6,9 @@ we use tech stack:
 1. Nuxt3
 2. Element Plus
 3. Tailwind CSS
+4. nuxt-gtag for Google Analytics
+5. @nuxtjs/sitemap for sitemap
+6. @nuxtjs/i18n for i18n
 
 
 ## Setup

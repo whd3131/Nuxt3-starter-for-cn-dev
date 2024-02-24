@@ -63,8 +63,8 @@ export default defineNuxtConfig({
     langDir: 'locales/',
     lazy: false,
     locales: [
-      { code: 'en', file: 'en.json' },
-      { code: 'zh', file: 'zh.json' }
+      { code: 'en', name: 'English', file: 'en.json', iso: 'en-US', flag: 'us' },
+      { code: 'zh', name: '中文', file: 'zh.json', iso: 'zh-CN', flag: 'cn' }
     ],
     compilation: {
       strictMessage: false
@@ -75,11 +75,10 @@ export default defineNuxtConfig({
     },
     skipSettingLocaleOnNavigate: true,
 
-    detectBrowserLanguage: { // 自动检测浏览器语言
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',  // recommended
-    }
+    // detectBrowserLanguage: { // 自动检测浏览器语言
+    //   redirectOn: 'root',  // recommended
+    //   alwaysRedirect: true
+    // }
   },
 
   // vueuse

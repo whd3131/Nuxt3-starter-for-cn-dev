@@ -10,6 +10,7 @@ watchEffect(() => {
 </script>
 
 <template>
+  <LanguageSeletor />
   <div m-3>
     <h3>Hi, {{ name }}!</h3>
 
